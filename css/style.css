@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+/* utility */
+
+h1 {
+    font-weight: 300;
+}
+
+h2,
+h3 {
+    font-weight: 200;
+}
+
+p {
+    font-weight: 100;
+}
+
+#container {
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(27, 27, 27, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* current time location */
+
+.current {
+    display: flex;
+    justify-content: center;
+}
+
+.date h2 {
+    font-size: 18px;
+}
+
+.welcome {
+    margin: 0 80px;
+}
+
+.lat-long {
+    font-size: 14px;
+    text-align: right;
+}
+
+/* current weather */
+
+.current-weather {
+    max-width: 350px;
+    padding: 0 20px 30px 20px;
+    background-color: rgb(27, 27, 27, 0.5);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.current-top {
+    display: flex;
+}
+
+.current-temp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.day-temp {
+    margin: 20px 0 5px 0;
+}
+
+.current-day,
+.item-day {
+    background-color: rgb(15, 15, 15, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.current-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* next 7 days */
+
+.next {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    font-weight: 300;
+    background-color: rgb(27, 27, 27, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.item-temp {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* responsive design */
+
+@media screen and (max-width: 1060px) {
+    .next {
+        overflow-x: scroll;
+        justify-content: start;
+        align-items: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .current {
+        justify-content: space-evenly;
+    }
+
+    .welcome {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #container {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .date h2,
+    h3,
+    p {
+        font-size: 15px;
+        margin-right: 10px;
+    }
+
+    .current-weather {
+        max-width: 280px;
+    }
+
+    .current-temp {
+        font-size: 14px;
+    }
+
+    .current-icon img {
+        width: 100%;
+    }
+}
