@@ -1,4 +1,4 @@
-const API_KEY = "2e61246cf2c95899a87f0b2ae4ccd179";
+const API_KEY = "2e61246cf2c95899a87f0b2ae4ccd179"; // don't use the same api key
 
 // dom elements
 let timeEl = document.querySelector(".time-element");
